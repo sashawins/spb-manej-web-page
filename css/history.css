@@ -1,0 +1,354 @@
+@font-face{
+    font-family: 'AV Fontimer';
+    src: url("/css/Manej/fonts/AVFontimer-Bold.woff2") format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
+  }
+
+
+  @font-face {
+    font-family: 'AV Fontimer ExtLt';
+    src: url('/css/Manej/fonts/AVFontimer-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Evolventa';
+    src: url('/css/Manej/fonts/Evolventa-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Evolventa Bold';
+    src: url('/css/Manej/fonts/Evolventa-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Evolventa, sans-serif;
+    background-color: #FFFCF9;
+    background-image: url('/img/Vector_3.png');
+
+      background-size: 210%;
+      background-position: top;
+      background-repeat: no-repeat;
+      position: relative;
+      z-index: 1;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: #FFFCF9;
+    border-bottom: 1px solid #CECECE;
+    position: relative;
+      z-index: 2;
+  }
+  .logo img {
+    height: 35px;
+  }
+  .nav-links a {
+    margin-left: 65px;
+    text-decoration: none;
+    color: #1A1515;
+    font-weight: normal;
+    font-size: 20px;
+  }
+  .nav-links a:hover {
+    text-decoration: underline;
+    color: #CE3233;
+  }
+
+
+
+
+  .banner {
+    text-align: center;
+    padding: 100px 20px;
+
+  }
+
+  .banner .subtitle {
+    color: #F02C12;
+    font-family: 'AV Fontimer', sans-serif;
+    font-weight: bold;
+    font-size: 248px;
+    margin: 0;
+    line-height: 1;
+  }
+
+  .banner .title {
+    color: #1A1515;
+    font-family: 'AV Fontimer', sans-serif;
+    font-weight: bold;
+    font-size: 82px;
+    margin: 0;
+  }
+
+  .banner .description {
+    color: #1A1515;
+    font-family: 'AV Fontimer', sans-serif;
+    font-weight: bold;
+    font-size: 42px;
+    margin: 0;
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.flip-block {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  max-width: 1000px;
+  margin: 400px auto 450px;
+}
+
+/* Свободное позиционирование */
+.date-box,
+.text-flip,
+.photo-flip {
+  position: absolute;
+}
+
+/* Дата */
+.date-box {
+  padding: 12px 20px;
+  font-weight: 200;
+  text-align: center;
+  font-family: 'AV Fontimer ExtLt';
+  font-size: 180px;
+  color: #F02C12;
+}
+
+/* Текст (флип) */
+.text-flip {
+  perspective: 1000px;
+  border-radius: 12px;
+}
+
+.text-flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.text-side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  font-size: 24px;
+  color: #FFFCF9;
+  background: #970C0C;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.text-side.back {
+  transform: rotateY(180deg);
+}
+
+/* Фото (флип) */
+.photo-flip {
+  perspective: 1000px;
+  border-radius: 12px;
+}
+
+.photo-flip-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.photo-side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.photo-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-side.back {
+  transform: rotateY(180deg);
+}
+
+
+
+/* Отключить поворот при наведении */
+.no-flip .text-flip-inner {
+  transform: none !important;
+}
+
+/* И блок не должен реагировать на hover */
+.no-flip .text-flip-inner:hover {
+  transform: none !important;
+}
+
+
+/* Отключить поворот при наведении */
+.no-flip-2 .photo-flip-inner {
+  transform: none !important;
+}
+
+/* И блок не должен реагировать на hover */
+.no-flip-2 .photo-flip-inner:hover {
+  transform: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFCF9;
+    color: #1A1515;
+    padding: 40px 60px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-logo {
+    max-width: 150px;
+    height: auto;
+  }
+  
+  .footer-center {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-center a {
+    color: #1A1515;
+    text-decoration: none;
+    font-size: 26px;
+    font-family: Evolventa, sans-serif;
+  }
+  
+  .footer-center a:hover {
+    text-decoration: underline;
+    color: #CE3233;
+  }
+  
+  .footer-right p {
+    margin: 5px 0;
+    font-size: 14px;
+    font-family: Evolventa, sans-serif;
+    text-align: right;
+  }
+
+
+
+
+
+  #back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  display: none; /* Скрываем по умолчанию */
+  z-index: 9999;
+  transition: opacity 0.3s;
+}
+
+#back-to-top img {
+  width: 100%; /* Настройте размер под ваше изображение */
+  height: 100%px;
+}
+
+#back-to-top:hover {
+  opacity: 0.7;
+}

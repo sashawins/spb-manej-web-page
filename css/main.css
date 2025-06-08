@@ -1,0 +1,433 @@
+@font-face{
+    font-family: 'AV Fontimer';
+    src: url("/css/Manej/fonts/AVFontimer-Bold.woff2") format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
+  }
+
+
+  @font-face {
+    font-family: 'AV Fontimer ExtLt';
+    src: url('/css/Manej/fonts/AVFontimer-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Evolventa';
+    src: url('/css/Manej/fonts/Evolventa-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Evolventa Bold';
+    src: url('/css/Manej/fonts/Evolventa-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Evolventa, sans-serif;
+    background-color: #FFFCF9;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: #FFFCF9;
+    border-bottom: 1px solid #CECECE;
+    position: relative;
+      z-index: 2;
+  }
+  .logo img {
+    height: 35px;
+  }
+  .nav-links a {
+    margin-left: 65px;
+    text-decoration: none;
+    color: #1A1515;
+    font-weight: normal;
+    font-size: 20px;
+  }
+  .nav-links a:hover {
+    text-decoration: underline;
+    color: #CE3233;
+  }
+
+
+
+
+  .banner {
+    position: relative;
+    min-height: 1080px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .banner-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); /* полупрозрачный черный */
+    opacity: 0;
+    transition: opacity 1.5s;
+    z-index: 1;
+    pointer-events: none; /* чтобы не мешал кликам по тексту */
+  }
+
+  .banner-text {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 1.5s;
+  }
+
+  .banner .subtitle {
+    color: #F02C12;
+    font-family: 'AV Fontimer', sans-serif;
+    font-weight: bold;
+    font-size: 248px;
+    margin: 0;
+    line-height: 1;
+  }
+
+  .banner .title {
+    color: #FFFCF9;
+    font-family: 'AV Fontimer', sans-serif;
+    font-weight: bold;
+    font-size: 82px;
+    margin: 0;
+    
+  }
+
+  .banner .description {
+    color: #FFFCF9;
+    font-family: 'AV Fontimer', sans-serif;
+    font-weight: bold;
+    font-size: 42px;
+    margin: 0;
+  }
+
+  
+
+
+  /* Секция и заголовок */
+.info-section {
+    padding: 80px 40px;
+    background-color: #FFFCF9;
+    text-align: center;
+  }
+  
+  .info-title {
+    font-size: 96px;
+    font-weight: bold;
+    color: #F02C12;
+    font-family: 'AV Fontimer', sans-serif;
+    margin-bottom: 60px;
+  }
+  
+  /* Контейнер из 4-х блоков */
+  .info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 77px 0px; /* Вертикальные и горизонтальные отступы */
+  }
+  
+  /* Каждый блок занимает 45% ширины — два в ряд */
+  .info-box {
+    display: flex;
+    align-items: center;
+    flex: 1 1 calc(40% - 40px);
+    padding: 30px 10px;
+    border-radius: 12px;
+  }
+
+  .image-container {
+    margin-right: 50px;
+    position: relative;
+    padding-right: 50px;
+  }
+
+  .image-container::before {
+    content: ""; /* Псевдоэлемент для полосы */
+    position: absolute;
+    right: -85px; /* Полоска слева от изображения */
+    top: 0;
+    bottom: 0;
+    width: 4px; /* Ширина полосы */
+    background-color: #F02C12; /* Цвет полосы */
+  }
+  
+  /* Изображение */
+  .info-box img {
+    width: 140%;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  /* Текст с сохранением форматирования */
+  .info-text {
+    white-space: pre-wrap;
+    font-size: 24px;
+    color: #1A1515;
+    line-height: 1.5;
+    font-family: Evolventa, sans-serif;
+    text-align: left;
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* ======= ДВОЙНАЯ СЕКЦИЯ ======= */
+.double-section {
+  padding: 80px 20px;
+  background-color: #FFFCF9;
+  text-align: center;
+}
+
+.double-section-title {
+  font-size: 96px;
+    font-weight: bold;
+    color: #F02C12;
+    font-family: 'AV Fontimer', sans-serif;
+    margin-bottom: 60px;
+}
+
+.double-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.double-box {
+  flex: 0 1 calc(45% - 20px); /* две части в ряд */
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.double-box img {
+  width: 100%;
+  max-width: 50%;
+  border-radius: 12px;
+;
+}
+
+
+.img-left {
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.img-right {
+  margin-bottom: 10px;
+  margin-left: 60px;  
+}
+
+
+
+
+.double-text {
+  width: 100%;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'AV Fontimer', sans-serif;
+  font-weight: bold;
+  color: #CE3233;
+  white-space: pre-wrap;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Контейнер секции с фоновым изображением фиксированного размера */
+.fixed-bg-section {
+  background-image: url('/img/Group_28.png'); /* Замените на свой путь */
+  background-size: 100%; /* ВАЖНО: изображение сохраняет свои размеры */
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 80px 40px;
+}
+
+/* Внутреннее содержимое */
+.fixed-bg-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Левый текстовый блок */
+.text-block {
+  width: 60%;
+  margin-right: 40px;
+}
+
+.text-block h3 {
+  white-space: pre-wrap;
+  font-size: 96px;
+  margin-bottom: 16px;
+  font-family: 'AV Fontimer', sans-serif;
+  color: #FFFCF9;
+}
+
+.text-block p {
+  white-space: pre-wrap;
+  font-size: 24px;
+  font-family: 'Evolventa Bold';
+  font-weight: bold;
+  color: #FFFCF9;
+  line-height: 1.6;
+}
+
+/* Правый блок с картой */
+.map-block {
+  width: 35%;
+}
+
+.map-block iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFCF9;
+    color: #1A1515;
+    padding: 40px 60px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-logo {
+    max-width: 150px;
+    height: auto;
+  }
+  
+  .footer-center {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-center a {
+    color: #1A1515;
+    text-decoration: none;
+    font-size: 26px;
+    font-family: Evolventa, sans-serif;
+  }
+  
+  .footer-center a:hover {
+    text-decoration: underline;
+    color: #CE3233;
+  }
+  
+  .footer-right p {
+    margin: 5px 0;
+    font-size: 14px;
+    font-family: Evolventa, sans-serif;
+    text-align: right;
+  }
+
+
+
+
+
+  #back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  display: none; /* Скрываем по умолчанию */
+  z-index: 9999;
+  transition: opacity 0.3s;
+}
+
+#back-to-top img {
+  width: 100%; /* Настройте размер под ваше изображение */
+  height: 100%px;
+}
+
+#back-to-top:hover {
+  opacity: 0.7;
+}
